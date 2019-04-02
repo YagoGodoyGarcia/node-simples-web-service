@@ -29,6 +29,7 @@ router.post('/', async (req, res) => {
 
     request(options)
     .then((body) => {
+        console.log(body)
         res.send(body)
     }).catch((err) => {
         res.status(404).send(err.message);
