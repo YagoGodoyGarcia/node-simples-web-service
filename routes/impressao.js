@@ -26,7 +26,6 @@ router.post('/', async (req, res) => {
         },
         json: true
     }
-
     request(options)
         .then((body) => {
             console.log('post')
