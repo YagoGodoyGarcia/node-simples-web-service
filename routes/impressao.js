@@ -17,30 +17,31 @@ router.post('/', async (req, res) => {
 
     let options = {
         method: 'POST',
-        uri: 'www.google.com',
-        // headers: {
-        //     'Content-Type': 'application/json'
-        // },
-        // body: {
-        //     Impressao: impressao
-        // },
-        // json: true
+        uri: 'http://189.44.46.251:3000/api/impressao',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: {
+            Impressao: impressao
+        },
+        json: true
     }
 
     request(options)
-    .then((body) => {
-        console.log(body)
-        res.send(body)
-    }).catch((err) => {
-        console.log(err)
-        res.status(404).send(err.message);
-    })
+        .then((body) => {
+            console.log('post')
+            console.log(body)
+            res.send(body)
+        }).catch((err) => {
+            console.log('post')
+            console.log(err)
+            res.status(404).send(err.message);
+        })
 
     console.log(impressao)
 });
 
 router.get('/', async (req, res) => {
-      
     res.send(req.query.validationToken);
 });
 
