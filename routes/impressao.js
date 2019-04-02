@@ -37,6 +37,11 @@ router.post('/', async (req, res) => {
     console.log(impressao)
 });
 
+router.get('/', async (req, res) => {
+      
+    res.send(req.query.validationToken);
+});
+
 module.exports = router;
 
 
