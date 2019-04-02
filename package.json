@@ -1,0 +1,24 @@
+{
+  "name": "ProjetoNode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "ProjetoNode": "serve.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "request-promise": "^4.2.4"
+  },
+  "engines": {
+    "node": "8.11.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
