@@ -38,6 +38,7 @@ router.post('/', async (req, res) => {
     //     })
 
     console.log(impressao)
+    console.log(impressao['data']['responseDetails']['responseWithQuestions'])
 });
 
 router.get('/', async (req, res) => {
