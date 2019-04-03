@@ -39,9 +39,9 @@ router.post('/', async (req, res) => {
 
     console.log(impressao)
     console.log("---------------------------------------------------------\n")
-    var arrayEans = impressao['data']['responseDetails']['responseWithQuestions'][0]['answer']
+    var arrayEans = impressao['data']['responseDetails']['responseWithQuestions'][0]['answer'].replace("[", '').replace("]", '')
     
-    arrayEans = Object.assign({}, arrayEans)
+    // arrayEans = Object.assign({}, arrayEans)
     console.log(arrayEans)
     console.log(typeof arrayEans)
 });
