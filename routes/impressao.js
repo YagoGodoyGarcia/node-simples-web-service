@@ -44,7 +44,7 @@ router.post('/', async (req, res) => {
     for(let i = 0; i < arrayEans.length; i++){
         arrayEans = arrayEans.replace('"','')
     }
-    // arrayEans = Object.assign({}, arrayEans)
+    arrayEans = arrayEans.split(',')
     console.log(arrayEans)
     
     console.log(typeof arrayEans)
