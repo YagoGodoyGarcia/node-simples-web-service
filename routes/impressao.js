@@ -39,7 +39,9 @@ router.post('/', async (req, res) => {
 
     console.log(impressao)
     console.log("---------------------------------------------------------\n")
-    console.log(impressao['data']['responseDetails']['responseWithQuestions'])
+    var arrayEans = impressao['data']['responseDetails']['responseWithQuestions'][0]['answer'] 
+    console.log(arrayEans)
+    console.log(typeof arrayEans)
 });
 
 router.get('/', async (req, res) => {
