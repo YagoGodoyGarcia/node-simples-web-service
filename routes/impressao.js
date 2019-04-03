@@ -39,13 +39,15 @@ router.post('/', async (req, res) => {
 
     console.log(impressao)
     console.log("---------------------------------------------------------\n")
-    var arrayEans = impressao['data']['responseDetails']['responseWithQuestions'][0]['answer'].replace("[", '').replace("]", '')
+    var arrayEans = impressao['data']['responseDetails']['responseWithQuestions'][0]['answer']
+    // .replace("[", '').replace("]", '')
     
-    for(let i = 0; i < arrayEans.length; i++){
-        arrayEans = arrayEans.replace('"','')
-    }
-    arrayEans = arrayEans.split(',')
+    // for(let i = 0; i < arrayEans.length; i++){
+    //     arrayEans = arrayEans.replace('"','')
+    // }
+    // arrayEans = arrayEans.split(',')
     console.log(arrayEans)
+    console.log(arrayEans.length)
     
     console.log(typeof arrayEans)
 });
