@@ -15,27 +15,27 @@ router.post('/', async (req, res) => {
         fromUserProfilePic: req.body.fromUserProfilePic,
     });
 
-    let options = {
-        method: 'POST',
-        uri: 'http://189.44.46.251:3000/api/impressao',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: {
-            Impressao: impressao
-        },
-        json: true
-    }
-    request(options)
-        .then((body) => {
-            console.log('post')
-            console.log(body)
-            res.send(body)
-        }).catch((err) => {
-            console.log('post')
-            console.log(err)
-            res.status(404).send(err.message);
-        })
+    // let options = {
+    //     method: 'POST',
+    //     uri: 'http://189.44.46.251:3000/api/impressao',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: {
+    //         Impressao: impressao
+    //     },
+    //     json: true
+    // }
+    // request(options)
+    //     .then((body) => {
+    //         console.log('post')
+    //         console.log(body)
+    //         res.send(body)
+    //     }).catch((err) => {
+    //         console.log('post')
+    //         console.log(err)
+    //         res.status(404).send(err.message);
+    //     })
 
     console.log(impressao)
 });
