@@ -43,6 +43,10 @@ const Usuario = mongoose.model('Usuario', new mongoose.Schema({
             type: String,
             require: false,
         },
+        Saldo: {
+            type: Number,
+            require: false
+        },
         Cartao: {
             Numero: {
                 type: String,
